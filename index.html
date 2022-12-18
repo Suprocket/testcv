@@ -4,9 +4,111 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/img/lightning_icon.ico">
+    <title>CV</title>
 </head>
 <body>
-    <img src="https://avatars.githubusercontent.com/u/70916695?v=4" alt="My avatar">
+        <header id="hero">
+            <div class="container">
+                <nav class="nav">
+                    <ul class="nav-list">
+                      <li class="nav-item"><a href="#hero" class="nav-link">Hero</a></li>
+                      <li class="nav-item"><a href="#main" class="nav-link">Info</a></li>
+                    </ul>
+                    </nav>
+                <div class="header-info">
+                    <div class="photo">
+                        <img src="assets/img/Picture.png" alt="My photo">
+                    </div>
+                    <div class="info-about-me">
+                        <h1 class="my-name">Maxim <br> Samokhvalov</h1>
+                        <p class="my-prof">Junior Front-end developer</p>
+                        <a class="phone" href="tel:+7(991) 1083606" ><span class="phone-style">+7 991 1083606</span></a>
+                        <div class="links">
+                            <a class="logo" href="https://github.com/Suprocket"><img class="logo-img"src="assets/img/github.png" alt="Github-logo"></a>
+                            <a class="logo" href="https://t.me/sa_max_valoff"><img class="logo-img"src="assets/img/telegram.png" alt="Telegram-logo"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main" id="main">
+            <div class="container main-container">
+                <section class="section" id="skills">
+                    <h2 class = "section-title">Skills</h2>
+                    <ul>
+                        <li class="list">HTML (Emmet)</li>
+                        <li class="list">SASS (Tailwind, Bootstrap)</li>
+                        <li class="list">JS (React)</li>
+                        <li class="list">Git</li>
+                        <li class="list">Figma & Photoshop</li>
+                        <li class="list">VS Code</li>
+                    </ul>
+                </section>
+                <section class="section" id="about-me">
+                    <h2 class = "section-title">About me</h2>
+                    <p class="info-about-me">
+                        Hi! I like to create cool interactive websites that will profit to the business.<br> Also,
+                        I like to learn something new from the IT world and implement it <br>immediately. I think
+                        that the <br> Front-end developing will help me to reach the goals for IT.
+                    </p>
+                </section>
+                <section class="section" id="projects">
+                    <h2 class = "section-title">Projects</h2>
+                    <ul>
+                        <li class="list"><a href="https://stmwater24.ru/">Create SPA for stmwater.ru</a></li>
+                        <li class="list"><a href="https://github.com/Suprocket">Pet-projects in my github</a></li>
+                    </ul>
+                </section>
+                <section class="section" id="code">
+                    <h2 class = "section-title">Code example</h2>
+                    <code>
+                        const groupBy = (arrOfUsers, nameOfKey = '') => {
+                            let preacc = (acc, user) => {
+                              if (!Object.hasOwn(acc, user[nameOfKey])) {
+                                acc[user[nameOfKey]] = [];
+                              }
+                              acc[user[nameOfKey]].push(user);
+                              return acc;
+                            }
+                          
+                            let total = arrOfUsers.reduce(preacc, {});
+                            return total;
+                          }
+                           
+                          const students = [
+                            { name: 'Tirion', class: 'B', mark: 3 },
+                            { name: 'Keit', class: 'A', mark: 3 },
+                            { name: 'Ramsey', class: 'A', mark: 4 },
+                          ];
+    
+                        console.log(groupBy([], ''));
+                        console.log(groupBy(students, 'mark'));
+                    </code>
+                </section>
+                <section class="section" id="courses">
+                    <h2 class = "section-title">Courses</h2>
+                    <ul>
+                        <li class="list">Result school (junior frontend dev, february 2022)  </li>
+                        <li class="list">Hexlet (junior frontend dev, october 2022) </li>
+                    </ul>
+                </section>
+                <section class="section" id="languages">
+                    <h2 class = "section-title">Languages</h2>
+                    <ul>
+                        <li class="list">English - B1</li>
+                        <li class="list">French - A2</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="container footer-container">
+                <a href="https://github.com/Suprocket">https://github.com/Suprocket</a>
+                <p>2022 &copy;</p>
+                <a href="https://github.com/rolling-scopes-school/"><img class='footer-img' src="./assets/img/rs_school.svg" alt="logo_rsschool"></a>
+            </div>
+        </footer>
 </body>
 </html>
